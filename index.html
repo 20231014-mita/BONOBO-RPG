@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>星屑のレガリア V27 Final 完全版</title>
+<title>星屑のレガリア V28 True Final 完全版</title>
 <style>
 :root{
   --bg:#050814;--panel:#101a34ee;--panel2:#17264bee;--text:#edf4ff;--muted:#a9badb;
@@ -169,6 +169,21 @@ table{width:100%;border-collapse:collapse;font-size:13px}td,th{border-bottom:1px
 }
 @media(max-height:420px){.objective{display:none!important}.stat{max-height:88px!important}.joy{width:76px!important;height:76px!important}.quick button{min-height:34px!important}.quick .main{min-height:38px!important}}
 
+
+/* ===== V28 TRUE FINAL UI LOCK PATCH ===== */
+#wrap{overflow:hidden!important;position:relative!important}
+.ui{overflow:hidden!important;contain:layout!important;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)!important}
+.topbar{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:10px!important;left:10px!important;right:10px!important;top:calc(8px + env(safe-area-inset-top))!important;z-index:18!important;pointer-events:none!important}
+.stat{width:clamp(236px,30vw,318px)!important;max-height:132px!important;overflow:hidden!important;pointer-events:auto!important}.side{width:clamp(220px,28vw,318px)!important;max-height:132px!important;overflow:hidden!important;pointer-events:auto!important}.stat h1,.side h2{font-size:14px!important;margin-bottom:4px!important}.small{font-size:11px!important}.bar{height:9px!important;margin:3px 0!important}
+.objective{top:calc(8px + env(safe-area-inset-top))!important;left:clamp(258px,32vw,340px)!important;right:clamp(230px,30vw,340px)!important;transform:none!important;width:auto!important;max-width:none!important;min-width:0!important;padding:7px 10px!important;border-radius:14px!important;z-index:17!important}.objective .goal{font-size:14px!important}.objective .sub{font-size:11px!important}.objective .label{font-size:10px!important}
+.questbox{left:10px!important;top:calc(146px + env(safe-area-inset-top))!important;width:clamp(230px,27vw,294px)!important;max-height:34vh!important;overflow:hidden!important;z-index:12!important}
+.log{left:10px!important;bottom:calc(clamp(130px,18vw,190px) + env(safe-area-inset-bottom))!important;width:clamp(260px,42vw,430px)!important;max-height:100px!important;overflow:hidden!important;z-index:12!important}.help{right:10px!important;bottom:calc(clamp(130px,18vw,190px) + env(safe-area-inset-bottom))!important;width:clamp(240px,32vw,330px)!important;max-height:92px!important;overflow:hidden!important;z-index:12!important}
+.touchControls{left:0!important;right:0!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;padding:0 clamp(8px,2vw,18px)!important;display:flex!important;justify-content:space-between!important;align-items:flex-end!important;gap:10px!important;z-index:30!important;max-width:100vw!important;overflow:visible!important}.joy{width:clamp(100px,17vw,168px)!important;height:clamp(100px,17vw,168px)!important;flex:0 0 auto!important}.joyRing{inset:22%!important}.joyKnob{width:44%!important;height:44%!important;margin:0!important;left:28%!important;top:28%!important}.quick{width:clamp(212px,32vw,310px)!important;grid-template-columns:1fr 1fr!important;gap:7px!important;flex:0 0 auto!important}.quick button{min-height:clamp(42px,6.8vw,62px)!important;padding:7px 6px!important;font-size:clamp(10px,1.45vw,13px)!important;border-radius:14px!important}.quick .main{min-height:clamp(48px,7.5vw,70px)!important}.hint{bottom:calc(clamp(116px,17vw,182px) + env(safe-area-inset-bottom))!important;max-width:min(70vw,560px)!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;z-index:16!important}
+.battlebox{width:min(970px,96vw)!important;max-height:calc(100vh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom))!important;overflow:auto!important;-webkit-overflow-scrolling:touch!important}.battleScene{height:clamp(184px,30vh,258px)!important}.battleBtns{gap:7px!important}.battleBtns button{min-height:clamp(44px,7vh,62px)!important;font-size:clamp(11px,1.6vw,14px)!important;padding:8px 7px!important}.battleHud{gap:8px!important}
+@media(max-width:980px){.side,.questbox,.help{display:none!important}.objective{left:calc(258px + env(safe-area-inset-left))!important;right:8px!important}.log{display:none!important}.stat{max-height:118px!important}.topbar{right:8px!important;left:8px!important}}
+@media(max-width:720px),(max-height:560px){.topbar{display:block!important;left:6px!important;right:6px!important;top:calc(6px + env(safe-area-inset-top))!important}.stat{width:min(238px,58vw)!important;max-height:108px!important;padding:7px!important}.objective{left:6px!important;right:6px!important;top:calc(118px + env(safe-area-inset-top))!important;padding:6px 8px!important}.objective .goal{font-size:12px!important}.objective .sub{display:none!important}.touchControls{bottom:calc(5px + env(safe-area-inset-bottom))!important;padding:0 6px!important;gap:5px!important}.joy{width:clamp(82px,26vw,122px)!important;height:clamp(82px,26vw,122px)!important}.quick{width:clamp(172px,56vw,238px)!important;gap:5px!important}.quick button{min-height:38px!important;padding:5px 3px!important;font-size:10px!important;border-radius:11px!important}.quick .main{min-height:44px!important}.hint{display:none!important}.battle{align-items:stretch!important}.battlebox{width:100vw!important;max-height:100vh!important;border-radius:0!important;padding:8px!important}.battleScene{height:166px!important}.battleHud{grid-template-columns:1fr!important}.enemyTip{display:none!important}}
+@media(max-width:390px){.stat{width:220px!important}.objective{display:none!important}.joy{width:78px!important;height:78px!important}.quick{width:168px!important}.quick button{min-height:34px!important;font-size:9px!important}.quick .main{min-height:38px!important}}
+
 </style>
 </head>
 <body>
@@ -181,7 +196,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}td,th{border-bottom:1px
     <div class="lowHp" id="lowHp"></div>
     <div class="panel log" id="logPanel"></div>
     <div class="panel help"><b>操作</b> 左ジョイスティック / WASDで移動。マップタップで自動移動。E・右下ボタンで調べる。Mでメニュー。</div>
-    <div class="hint">V27 Final / タップ自動移動 / 右下で調べる</div>
+    <div class="hint">V28 True Final / タップ自動移動 / 右下で調べる</div>
     <div class="touchControls">
       <div class="joy" id="joy"><div class="joyBase"></div><div class="joyRing"></div><div class="joyKnob" id="joyKnob"></div></div>
       <div class="quick">
@@ -196,7 +211,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}td,th{border-bottom:1px
   <div class="overlay show" id="titleOverlay">
     <div class="modal" style="text-align:center;max-width:800px">
       <div class="title">星屑のレガリア</div>
-      <div class="subtitle">V27 Final 完全版：見やすい主人公・整理済みUI・進化戦闘・保存コード全部入り</div>
+      <div class="subtitle">V28 True Final 完全版：最終安定化・豊富な敵・整理済みUI・保存コード全部入り</div>
       <div class="titleArt">🌠 ⚔️ 🐉</div>
       <p style="color:#d7e4ff;line-height:1.65">星を失った巨大島アステリアを巡り、古代装置レガリアを修復しよう。<br>最終目標は、宵闇城で宵闇の王を倒し、島に夜明けを取り戻すことです。</p>
       <div class="nameSetup" id="nameSetup"><label for="nicknameInput">冒険者のニックネーム</label><input id="nicknameInput" maxlength="12" value="" placeholder="名前を入力してください" autocomplete="nickname" inputmode="text" /><div class="nameError">ニックネームを入力すると冒険を始められます。</div></div>
@@ -215,8 +230,8 @@ table{width:100%;border-collapse:collapse;font-size:13px}td,th{border-bottom:1px
 <script>
 (()=>{'use strict';
 const $=id=>document.getElementById(id),C=$('game'),X=C.getContext('2d'),BC=$('battleCanvas'),BX=BC.getContext('2d');
-const W=C.width,H=C.height,TILE=32,MW=150,MH=105,VERSION='V27 FINAL COMPLETE',SAVE_KEY='stardust_regalia_v27_final_complete',PREFIX='SR-V27:';
-const LEGACY=['stardust_regalia_v26_1_bright_ui_complete','stardust_regalia_v26_energy_arsenal','stardust_regalia_v25_ultimate','stardust_regalia_v24_hero_monster','stardust_regalia_save_v1'];
+const W=C.width,H=C.height,TILE=32,MW=150,MH=105,VERSION='V28 TRUE FINAL COMPLETE',SAVE_KEY='stardust_regalia_v28_true_final_complete',PREFIX='SR-V28:';
+const LEGACY=['stardust_regalia_v27_final_complete','stardust_regalia_v26_1_bright_ui_complete','stardust_regalia_v26_energy_arsenal','stardust_regalia_v25_ultimate','stardust_regalia_v24_hero_monster','stardust_regalia_save_v1'];
 X.imageSmoothingEnabled=true;BX.imageSmoothingEnabled=true;
 const T={GRASS:0,WATER:1,FOREST:2,MOUNTAIN:3,ROAD:4,TOWN:5,DUNGEON:6,SAND:7,LAVA:8,SNOW:9,SWAMP:10},pass=new Set([0,2,3,4,5,6,7,8,9,10]);
 const tileColors=['#2f834f','#1b4d78','#1d5937','#555f70','#8b6d43','#586681','#272c42','#c5a96a','#86362e','#dce8f2','#345d54'];
@@ -537,6 +552,128 @@ function draw(){
 }
 
 
+
+/* ===== V28 TRUE FINAL: richer enemies, safer UI, progression check ===== */
+Object.assign(DATA.enemies,{
+  hornRabbit:['ツノうさぎ','🐇',2,54,11,3,28,[14,24],{herb:.22,hide:.2},[0,4],'素早く突進する草原の敵。防御で安定'],
+  starBee:['星蜜バチ','🐝',2,48,12,2,30,[13,27],{herb:.18,slimeCore:.1},[0,2],'毒針と連続攻撃を使う。早めに倒そう'],
+  thornSlime:['トゲスライム','🟢',3,72,15,5,42,[20,34],{slimeCore:.45,herb:.12},[0,2],'トゲで反撃する硬めのスライム'],
+  banditScout:['盗賊斥候','🗡️',4,82,17,5,58,[30,55],{hide:.2,potion:.12,ancientCoin:.04},[0,4,7],'素早い斬撃とフェイントを使う人型の敵'],
+  treant:['森の古樹兵','🌳',5,128,20,9,82,[42,72],{wood:.75,herb:.28,crystal:.08},[2],'根で足止めする。炎が有効'],
+  venomMoth:['毒燐モス','🦋',5,92,22,4,78,[36,64],{herb:.2,slimeCore:.2,crystal:.08},[2,10],'毒の粉と回避技を使う'],
+  ghostShroom:['幽光キノコ','🍄',6,116,24,6,96,[48,78],{herb:.26,crystal:.12,ether:.08},[2,6,10],'眠気の胞子と光弾を使う'],
+  rockBat:['岩羽コウモリ','🦇',5,92,21,7,80,[38,70],{ore:.35,hide:.2},[3,6],'空から急降下する。槍・弓が有利'],
+  crystalScorpion:['水晶サソリ','🦂',7,148,30,12,140,[62,112],{crystal:.32,ore:.42},[3,7],'硬い甲殻と毒針を持つ。雷が有効'],
+  thunderHawk:['雷鳴ホーク','🦅',8,136,34,8,156,[70,130],{crystal:.2,ether:.18},[3,9],'雷の急降下を使う。防御タイミングが重要'],
+  ironKnight:['古鉄の騎士','🤖',8,178,32,15,170,[78,138],{ore:.55,ancientCoin:.08},[3,6],'防御を固める人型兵。魔法か打撃が有効'],
+  iceWolf:['氷牙ウルフ','🐺',7,138,29,8,132,[58,105],{frost:.36,hide:.22},[9],'氷の爪で連続攻撃。炎が弱点'],
+  snowMage:['雪原の魔導士','🧙‍♂️',9,142,35,7,178,[80,150],{frost:.35,ether:.25,crystal:.15},[9,6],'氷魔法と回復を使う。短期決戦が有効'],
+  crystalYeti:['水晶イエティ','🦣',10,238,39,16,245,[120,210],{frost:.5,crystal:.28,hide:.24},[9],'重い氷拳の大技を持つ'],
+  ruinArcher:['遺跡弓兵','🏹',7,124,30,7,130,[58,108],{wood:.18,ancientCoin:.06,crystal:.12},[6,7],'遠距離から狙撃する。防御で被害を減らす'],
+  ancientDrone:['古代ドローン','🛸',9,160,36,10,205,[98,175],{crystal:.3,stardust:.08,ether:.16},[6],'レーザーと自己修復を使う古代兵器'],
+  mirrorKnight:['鏡面の騎士','🪞',10,210,40,14,260,[140,230],{crystal:.28,ancientCoin:.12},[6],'反射構えと強斬撃を使う'],
+  scarab:['黄金スカラベ','🪲',6,118,25,10,112,[70,132],{ancientCoin:.18,ore:.18},[7],'金貨を落としやすいが硬い'],
+  sandWorm:['砂海ワーム','🐛',9,235,38,13,225,[130,240],{ore:.22,ember:.12,ancientCoin:.12},[7],'地中から大きく噛みつく。大技前に防御'],
+  sunDjinn:['陽炎ジン','🧞',10,188,42,9,270,[150,260],{ember:.3,crystal:.22,ether:.16},[7,8],'炎と幻惑を使う魔法型'],
+  magmaGolem:['溶岩ゴーレム','🪨',11,275,45,18,320,[170,310],{ember:.46,ore:.42,crystal:.2},[8],'炎をまとった重装敵。氷が有効'],
+  ashPhoenix:['灰翼フェニックス','🔥',12,220,48,11,360,[190,340],{ember:.5,stardust:.12,megaPotion:.16},[8],'炎の羽と自己再生を使う'],
+  lavaKnight:['紅蓮騎士','🛡️',12,260,50,17,390,[210,360],{ember:.42,ancientCoin:.14,ore:.28},[8,6],'炎の剣技と防御崩しを使う'],
+  bogWitch:['沼の呪術師','🧙',10,180,41,9,240,[120,220],{shadow:.28,ether:.22,crystal:.12},[10],'呪いと回復妨害を使う'],
+  nightStalker:['夜影ストーカー','👤',11,205,47,12,310,[160,290],{shadow:.36,hide:.22,stardust:.06},[10,6],'姿を消して強襲する。光属性が有効'],
+  curseArmor:['呪鎧兵','🛡️',12,290,49,20,380,[210,370],{shadow:.32,ore:.32,ancientCoin:.14},[10,6],'硬い呪いの鎧。魔法と奥義で押そう']
+});
+function v28EnemyFamily(id){
+  if(/slime/i.test(id))return 'slime';
+  if(/wolf|Rabbit|Bee|Bat|Moth|Hawk|Stalker/i.test(id))return 'swift';
+  if(/golem|Yeti|Worm|Armor|Knight|Scorpion|Scarab/i.test(id))return 'heavy';
+  if(/Mage|Witch|Wisp|Djinn|Drone|Shroom|shade|Abyss|Final/i.test(id))return 'magic';
+  if(/salamander|Phoenix|lava|magma/i.test(id))return 'fire';
+  return 'beast';
+}
+function enemyMovePool(e){
+  const id=e.id, fam=v28EnemyFamily(id), boss=!!e.boss;
+  const base=[{name:'体当たり',type:'slash',ep:1,power:.88,weight:4},{name:'フェイント攻撃',type:'wind',ep:2,power:.78,weight:2,effect:'stealEP'}];
+  const add={
+    slime:[{name:'粘液ショット',type:'dark',ep:2,power:.9,weight:3,effect:'slow'},{name:'ぷるぷるプレス',type:'smash',ep:4,power:1.55,weight:1,charge:true}],
+    swift:[{name:'高速突進',type:'pierce',ep:2,power:1.05,weight:3},{name:'連続かみつき',type:'slash',ep:3,power:1.25,weight:2},{name:'急所狙い',type:'wind',ep:4,power:1.65,weight:1,charge:true,effect:'stealEP'}],
+    heavy:[{name:'重撃',type:'smash',ep:2,power:1.08,weight:3},{name:'装甲砕き',type:'smash',ep:3,power:1.25,weight:2,effect:'breakGuard'},{name:'大地粉砕',type:'smash',ep:5,power:1.95,weight:1,charge:true}],
+    magic:[{name:'魔力弾',type:'dark',ep:2,power:1.0,weight:3},{name:'集中詠唱',type:'focus',ep:1,power:0,weight:2,effect:'charge'},{name:'呪いの波動',type:'dark',ep:4,power:1.62,weight:1,charge:true,effect:'stealEP'}],
+    fire:[{name:'火炎弾',type:'fire',ep:2,power:1.05,weight:3},{name:'燃える爪',type:'fire',ep:3,power:1.28,weight:2,effect:'burn'},{name:'紅蓮爆破',type:'fire',ep:5,power:1.92,weight:1,charge:true}],
+    beast:[{name:'爪撃',type:'slash',ep:1,power:.95,weight:4},{name:'咆哮',type:'wind',ep:2,power:.7,weight:2,effect:'stealEP'},{name:'猛獣ラッシュ',type:'slash',ep:4,power:1.55,weight:1,charge:true}]
+  }[fam]||[];
+  const special={
+    starBee:[{name:'毒針ラッシュ',type:'pierce',ep:4,power:1.58,weight:2,charge:true,effect:'poison'}],venomMoth:[{name:'毒燐粉',type:'dark',ep:4,power:1.4,weight:2,charge:true,effect:'poison'}],ghostShroom:[{name:'まどろみ胞子',type:'dark',ep:3,power:.95,weight:3,effect:'stealEP'}],
+    rockBat:[{name:'急降下ソニック',type:'wind',ep:4,power:1.55,weight:2,charge:true}],thunderHawk:[{name:'雷鳴ダイブ',type:'thunder',ep:5,power:1.9,weight:2,charge:true}],crystalScorpion:[{name:'水晶尾針',type:'pierce',ep:4,power:1.62,weight:2,charge:true,effect:'poison'}],
+    snowMage:[{name:'氷結詠唱',type:'ice',ep:4,power:1.65,weight:2,charge:true,effect:'stealEP'}],crystalYeti:[{name:'氷山拳',type:'ice',ep:5,power:1.95,weight:2,charge:true}],
+    ancientDrone:[{name:'自己修復',type:'heal',ep:3,power:0,weight:2,effect:'healSelf'},{name:'星導レーザー',type:'thunder',ep:5,power:1.9,weight:2,charge:true}],mirrorKnight:[{name:'反射構え',type:'guard',ep:2,power:0,weight:2,effect:'shield'},{name:'鏡月斬り',type:'slash',ep:5,power:1.9,weight:2,charge:true}],
+    sandWorm:[{name:'地中強襲',type:'smash',ep:5,power:2.0,weight:2,charge:true}],sunDjinn:[{name:'陽炎爆ぜ',type:'fire',ep:5,power:1.86,weight:2,charge:true,effect:'stealEP'}],
+    ashPhoenix:[{name:'灰からの再燃',type:'heal',ep:3,power:0,weight:2,effect:'healSelf'},{name:'不死鳥フレア',type:'fire',ep:5,power:2.05,weight:2,charge:true}],lavaKnight:[{name:'紅蓮十文字',type:'fire',ep:5,power:1.95,weight:2,charge:true,effect:'breakGuard'}],
+    bogWitch:[{name:'泥沼の呪い',type:'dark',ep:4,power:1.5,weight:2,charge:true,effect:'stealEP'}],nightStalker:[{name:'影縫い強襲',type:'dark',ep:4,power:1.72,weight:2,charge:true,effect:'stealEP'}],curseArmor:[{name:'呪鎧クラッシュ',type:'smash',ep:5,power:2.02,weight:2,charge:true,effect:'breakGuard'}],
+    bossMine:[{name:'崩岩粉砕',type:'smash',ep:5,power:2.1,weight:4,charge:true,effect:'breakGuard'}],bossTower:[{name:'幻竜ブレス',type:'thunder',ep:5,power:2.08,weight:4,charge:true}],bossFinal:[{name:'終焉ノ刻',type:'dark',ep:5,power:2.16,weight:4,charge:true,effect:'stealEP'}],bossArena:[{name:'流星連閃',type:'slash',ep:5,power:2.05,weight:4,charge:true}],bossAbyss:[{name:'深淵崩界',type:'dark',ep:5,power:2.25,weight:4,charge:true,effect:'stealEP'}]
+  }[id]||[];
+  return base.concat(add,special).map(m=>boss?{...m,weight:m.weight+(m.charge?2:0)}:m);
+}
+function chooseEnemyMove(e,allowCharge=true){
+  ensureBattleEnergy();
+  let pool=enemyMovePool(e).filter(m=>(battle.enemyEP||0)>=m.ep && (allowCharge||!m.charge));
+  if(!pool.length)pool=enemyMovePool(e).filter(m=>m.ep<=1);
+  const total=pool.reduce((a,m)=>a+(m.weight||1),0);let r=Math.random()*total;
+  for(const m of pool){r-=m.weight||1;if(r<=0)return m}
+  return pool[0]||{name:'攻撃',type:'slash',ep:1,power:1,weight:1};
+}
+function enemyAttackType(e){const m=battle?.pendingEnemyMove; if(m?.type)return m.type; const id=e?.id||''; if(/ice|snow|Yeti/i.test(id))return 'ice'; if(/fire|lava|magma|Phoenix|salamander|Djinn/i.test(id))return 'fire'; if(/thunder|Hawk|Drone|Tower/i.test(id))return 'thunder'; if(/shade|Witch|Stalker|Abyss|Final|curse/i.test(id))return 'dark'; if(/golem|Yeti|Worm|Armor|Scorpion|Scarab/i.test(id))return 'smash'; if(/Bee|Bat|Archer|Rabbit/i.test(id))return 'pierce'; return 'slash'}
+function enemySpecialName(e){const m=battle?.pendingEnemyMove;if(m?.name)return m.name;const p=enemyMovePool(e).filter(x=>x.charge).sort((a,b)=>b.power-a.power)[0];return p?.name||'大技'}
+function enemyWeaknessText(e){const id=e?.id||''; if(/fire|lava|magma|Phoenix|salamander|Djinn/i.test(id))return '弱点：氷・水系'; if(/ice|snow|Yeti|frost/i.test(id))return '弱点：炎'; if(/golem|Armor|Knight|Scarab|Scorpion/i.test(id))return '弱点：魔法・雷・打撃'; if(/shade|Witch|Stalker|Abyss|Final|curse/i.test(id))return '弱点：光・星属性・奥義'; if(/Bee|Moth|Bat|Hawk|Archer/i.test(id))return '弱点：弓・雷・風'; if(/slime/i.test(id))return '弱点：斬撃・炎'; return '弱点：状況に合わせたスキル'}
+function enemyRecommendText(e){if(e.warn)return `おすすめ：防御。次は「${enemySpecialName(e)}」`; if(S.player.hp/stat('maxHp')<.35)return 'おすすめ：回復アイテム'; if(battle?.heroEP<=0)return 'おすすめ：防御してEP回復'; if(S.player.energy>=S.player.maxEnergy)return 'おすすめ：武器奥義'; return `${enemyWeaknessText(e)} / EPを残して戦おう`}
+function applyEnemyMoveEffect(move,dmg){
+  if(!battle||!move)return;
+  const e=battle.enemy;
+  if(move.effect==='stealEP'){battle.heroEP=cl((battle.heroEP||0)-1,0,energyMax());log('行動EPを1削られた！','bad')}
+  if(move.effect==='breakGuard'){battle.def=false;S.player.guard=0;log('防御を崩された！','bad')}
+  if(move.effect==='poison'){const pd=Math.max(3,Math.floor(e.atk*.18));S.player.hp-=pd;log(`追加の毒ダメージ ${pd}`,'bad')}
+  if(move.effect==='burn'){const bd=Math.max(4,Math.floor(e.atk*.22));S.player.hp-=bd;log(`追加の炎ダメージ ${bd}`,'bad')}
+  if(move.effect==='healSelf'){const hv=Math.max(24,Math.floor(e.maxHp*.12));e.hp=cl(e.hp+hv,1,e.maxHp);battleFx('enemy','heal',0,false);log(`${e.name}は${hv}回復した。`,'bad')}
+  if(move.effect==='shield'){e.def+=2;battleFx('enemy','guard',0,false);log(`${e.name}の防御が上がった。`,'bad')}
+  if(move.effect==='charge'){battle.enemyEP=cl((battle.enemyEP||0)+2,0,6);battleFx('enemy','focus',0,false);log(`${e.name}は力を集中した。`,'bad')}
+}
+function enemyTurn(){
+  if(!inBattle||!battle||battle.finishing||battle.phaseChanging||battle.turn!=='enemy')return;
+  const e=battle.enemy,p=S.player;ensureBattleEnergy();
+  if(e.warn){
+    const move=battle.pendingEnemyMove||chooseEnemyMove(e,true);e.warn=false;battle.pendingEnemyMove=null;
+    showCutin(move.name,e.boss?'boss':'normal','SPECIAL ATTACK');battle.flash=Math.max(battle.flash,.55);battle.enemyEP=cl((battle.enemyEP||0)-move.ep,0,6);
+    let dmg=Math.floor(e.atk*move.power-stat('def')*.35);if(battle.def)dmg=Math.floor(dmg*.45);if(p.guard)dmg=Math.floor(dmg*.55);if(e.boss)addBackgroundDestruction(e,e.phase2?2.2:1.4);
+    hitPlayer(Math.max(1,dmg),move.name,move.type,true);applyEnemyMoveEffect(move,dmg);if(S.player.hp<=0){loseBattle();return}return;
+  }
+  const charged=chooseEnemyMove(e,true);
+  if(charged.charge && (battle.enemyEP||0)>=charged.ep && ch(e.boss?(e.phase2?.68:.48):.36)){
+    battle.pendingEnemyMove=charged;e.warn=true;log(`${e.name}が「${charged.name}」の構えに入った。防御しよう！`,'bad');showCutin('⚠ 大技準備',e.boss?'boss':'normal','DEFEND NOW');battle.turn='player';gainEP(1);renderBattle();return;
+  }
+  const move=chooseEnemyMove(e,false);battle.enemyEP=cl((battle.enemyEP||0)-move.ep,0,6);
+  if(['healSelf','shield','charge'].includes(move.effect)&&move.power===0){applyEnemyMoveEffect(move,0);battle.turn='player';gainEP(1);renderBattle();return}
+  let dmg=Math.max(1,Math.floor(e.atk*move.power*rand(88,116)/100-stat('def')*.38));
+  if(battle.def){dmg=Math.floor(dmg*.5);battle.def=false}if(p.guard){dmg=Math.floor(dmg*.6);p.guard--}
+  hitPlayer(dmg,move.name,move.type,false);applyEnemyMoveEffect(move,dmg);if(S.player.hp<=0){loseBattle();return}
+}
+function pickEnemy(tile){
+  let list=Object.keys(DATA.enemies).filter(id=>!DATA.enemies[id][11]&&DATA.enemies[id][9].includes(tile));
+  if(!list.length)list=['slime','wolf'];
+  const lv=S?.player?.lv||1;
+  list=list.filter(id=>DATA.enemies[id][2]<=lv+5 || ch(.18));
+  if(!list.length)list=['slime','hornRabbit','wolf'];
+  if(ch(.025))return cloneEnemy('mimic');
+  return cloneEnemy(list[rand(0,list.length-1)]);
+}
+function v28IntegrityCheck(){
+  const problems=[];
+  const inside=(name,x,y)=>{if(!(x>=0&&y>=0&&x<MW&&y<MH))problems.push(`${name} 座標外 ${x},${y}`)};
+  for(const n of NPCS)inside('NPC '+n[1],n[2],n[3]);
+  for(const c of CHESTS)inside('宝箱 '+c[1],c[2],c[3]);
+  for(const p of PLACES)inside('入口 '+p[1],p[2],p[3]);
+  for(const [id,e] of Object.entries(DATA.enemies)){if(!Array.isArray(e)||e.length<11)problems.push(`敵データ不完全 ${id}`)}
+  if(problems.length){console.warn('V28 integrity warnings',problems);log('一部データを安全補正しました。','bad')}else{console.log('V28 integrity check passed: map objects and enemy data OK')}
+}
+
 /* ===== V27 FINAL STABILITY PATCH ===== */
 function finalSafeSave(){
   try{return save(true)}catch(e){return false}
@@ -559,7 +696,7 @@ function boot(){
   bindInput();
   $('newGame').onclick=newGame;$('continueGame').onclick=cont;$('importTitle').onclick=importCode;$('howTo').onclick=how;
   $('nicknameInput').addEventListener('input',validateNickname);
-  genMap();S=base();repair();updateUI();updateTitleButtons();draw();
+  genMap();S=base();repair();v28IntegrityCheck();updateUI();updateTitleButtons();draw();
   setInterval(()=>{if(S&&!$('titleOverlay').classList.contains('show'))save(true)},30000);
 }
 boot();
